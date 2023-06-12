@@ -1,0 +1,266 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly STSProcess, Version=2.2.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Santec.Rescaling_Process.MonitorData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.Generic.List`1[Santec.STSProcess.RawItem]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean SmeMode 'get set' : 
+    Boolean OriginalMonitor 'get set' : 
+    Boolean MonitorUseMPM 'get set' : 
+  Methods:
+    get_SmeMode(): PrivateScope, Public, HideBySig, SpecialName
+    get_OriginalMonitor(): PrivateScope, Public, HideBySig, SpecialName
+    get_MonitorUseMPM(): PrivateScope, Public, HideBySig, SpecialName
+    Cal_MPM_index_offset(Double): PrivateScope, Public, HideBySig
+    Set_Rescaling_Monitor(): PrivateScope, Public, HideBySig
+Class Santec.Rescaling_Process.RawData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.Generic.List`1[Santec.STSProcess.RawItem]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean SmeMode 'get set' : 
+    Double SamplingFrequency 'get set' : 
+    Double AverageTime_ms 'get set' : 
+    Boolean MonitorUseMPM 'get set' : 
+  Methods:
+    get_SmeMode(): PrivateScope, Public, HideBySig, SpecialName
+    get_SamplingFrequency(): PrivateScope, Public, HideBySig, SpecialName
+    get_AverageTime_ms(): PrivateScope, Public, HideBySig, SpecialName
+    get_MonitorUseMPM(): PrivateScope, Public, HideBySig, SpecialName
+    Set_Rescaling_Index(Int32, Int32, Int32, Int32, Int32, Single[]): PrivateScope, Public, HideBySig
+    Cal_MPM_index_offset(Double): PrivateScope, Public, HideBySig
+    Set_Rescaling_Powers(): PrivateScope, Public, HideBySig
+Class Santec.Rescaling_Process.ProcessingData: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Properties:
+    Double StartWavelength 'get set' : 
+    Double StopWavelength 'get set' : 
+    Double ActualStepWavelength 'get set' : 
+    Double RescalingStepWavelenth 'get set' : 
+  Methods:
+    set_StartWavelength(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_StartWavelength(): PrivateScope, Public, HideBySig, SpecialName
+    set_StopWavelength(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_StopWavelength(): PrivateScope, Public, HideBySig, SpecialName
+    set_ActualStepWavelength(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_ActualStepWavelength(): PrivateScope, Public, HideBySig, SpecialName
+    set_RescalingStepWavelenth(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_RescalingStepWavelenth(): PrivateScope, Public, HideBySig, SpecialName
+    Add_Ref_MPMData_CH(Single[], STSDataStruct): PrivateScope, Public, HideBySig
+    Add_Meas_MPMData_CH(Single[], STSDataStruct): PrivateScope, Public, HideBySig
+    Add_Ref_MPMData_Slot(Single[,], STSDataStructForSlot): PrivateScope, Public, HideBySig
+    Add_Meas_MPMData_Slot(Single[,], STSDataStructForSlot): PrivateScope, Public, HideBySig
+    Add_Ref_MonitorData(Single[], Single[], STSDataStruct): PrivateScope, Public, HideBySig
+    Add_Meas_MonitorData(Single[], Single[], STSDataStruct): PrivateScope, Public, HideBySig
+    Add_Meas_MonitorData(Single[], Single[], STSMonitorStruct): PrivateScope, Public, HideBySig
+    Add_Ref_Rawdata(Single[], Single[], STSDataStruct): PrivateScope, Public, HideBySig
+    Add_Ref_Power_Rawdata(Single[], STSDataStruct): PrivateScope, Public, HideBySig
+    Add_Meas_Rawdata(Single[], Single[]): PrivateScope, Public, HideBySig
+    Add_Meas_Rawdata_for_Merge(Single[,], Single[,], Int32[]): PrivateScope, Public, HideBySig
+    Clear_Refdata(STSDataStruct): PrivateScope, Public, HideBySig
+    Clear_Measdata(STSDataStruct): PrivateScope, Public, HideBySig
+    Clear_Refdata(): PrivateScope, Public, HideBySig
+    Clear_Measdata(): PrivateScope, Public, HideBySig
+    Make_Target_Wavelength_Table(Double, Double, Double): PrivateScope, Public, HideBySig
+    Set_Target_Wavelength_Table(Double[]): PrivateScope, Public, HideBySig
+    Make_Sweep_Wavelength_Table(Double, Double, Double): PrivateScope, Public, HideBySig
+    Set_Sweep_Wavelength_Table(Double[]): PrivateScope, Public, HideBySig
+    Get_Target_Wavelength_Table(Double[]&): PrivateScope, Public, HideBySig
+Class Santec.Rescaling_Process.Rescaling: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :Santec.Rescaling_Process.ProcessingData
+  Properties:
+    Double MPMAVG 'get set' : 
+    Double SamplingRate 'get set' : 
+    Boolean IsOriginalMonitor 'get set' : 
+    Santec.STSProcess.RescalingMode RescalingMode 'get set' : 
+  Methods:
+    get_MPMAVG(): PrivateScope, Public, HideBySig, SpecialName
+    get_SamplingRate(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsOriginalMonitor(): PrivateScope, Public, HideBySig, SpecialName
+    get_RescalingMode(): PrivateScope, Public, HideBySig, SpecialName
+    Set_Rescaling_Setting(RescalingMode): PrivateScope, Public, HideBySig
+    Set_Rescaling_Setting(RescalingMode, Double, Boolean): PrivateScope, Public, HideBySig
+    Cal_RefData_Rescaling(): PrivateScope, Public, HideBySig
+    Cal_MeasData_Rescaling(): PrivateScope, Public, HideBySig
+    Get_Ref_RawData(STSDataStruct, Single[]&, Single[]&): PrivateScope, Public, HideBySig
+    Get_Ref_Power_Rawdata(STSDataStruct, Single[]&): PrivateScope, Public, HideBySig
+    Get_Ref_Monitor_Rawdata(STSDataStruct, Single[]&): PrivateScope, Public, HideBySig
+    Get_Ref_Monitor_Rawdata_ArrayRefType(STSDataStruct, Single[]&): PrivateScope, Public, HideBySig
+    Get_Meas_RawData(STSDataStruct, Single[]&, Single[]&): PrivateScope, Public, HideBySig
+    Get_Meas_Power_Rawdata(STSDataStruct, Single[]&): PrivateScope, Public, HideBySig
+    Get_Meas_Monitor_Rawdata(STSMonitorStruct, Single[]&): PrivateScope, Public, HideBySig
+Struct Santec.STSProcess.STSDataStructForSlot: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Properties:
+    Int32 MPMNumber 'get set' : 
+    Int32 SlotNumber 'get set' : 
+    Int32 RangeNumber 'get set' : 
+    Int32 SOP  'get set' : 
+    Int32 SweepCount 'get set' : 
+  Methods:
+    set_MPMNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_MPMNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_SlotNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SlotNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_RangeNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_RangeNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_SOP(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SOP(): PrivateScope, Public, HideBySig, SpecialName
+    set_SweepCount(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SweepCount(): PrivateScope, Public, HideBySig, SpecialName
+Struct Santec.STSProcess.STSMonitorStruct: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Properties:
+    Int32 MPMNumber 'get set' : 
+    Int32 SOP  'get set' : 
+    Int32 SweepCount 'get set' : 
+  Methods:
+    set_MPMNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_MPMNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_SOP(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SOP(): PrivateScope, Public, HideBySig, SpecialName
+    set_SweepCount(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SweepCount(): PrivateScope, Public, HideBySig, SpecialName
+Class Santec.STSProcess.CommonMethods: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    Double LIGHTSPEED = 299792458 : Public, Static, Literal, HasDefault
+  Methods:
+    SetProcessWorkingSetSize(IntPtr, Int32, Int32): PrivateScope, Public, Static, HideBySig, PinvokeImpl
+    Cal_Voltage_To_dBm(Single): PrivateScope, Public, Static, HideBySig
+    Cal_dBm_To_mW(Single): PrivateScope, Public, Static, HideBySig
+    Cal_dBm_To_W(Single): PrivateScope, Public, Static, HideBySig
+    Cal_W_To_dBm(Double): PrivateScope, Public, Static, HideBySig
+    Cal_mW_To_dBm(Double): PrivateScope, Public, Static, HideBySig
+    Cal_nm_To_THz(Double): PrivateScope, Public, Static, HideBySig
+    Cal_THz_To_nm(Double): PrivateScope, Public, Static, HideBySig
+    Cal_Interpolation(Double, Double, Double, Double, Double): PrivateScope, Public, Static, HideBySig
+    Cal_Interpolation(Double[], Double[], Double): PrivateScope, Public, Static, HideBySig
+Struct Santec.STSProcess.ErrorCode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Santec.STSProcess.ErrorCode Unknown = -2147483648 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.ErrorCode MeasureNotMatch = -1115 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.ErrorCode MeasureNotRescaling = -1114 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.ErrorCode MeasureNotExist = -1113 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.ErrorCode ReferenceNotMatch = -1112 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.ErrorCode ReferenceNotRescaling = -1111 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.ErrorCode ReferenceNotExist = -1110 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.ErrorCode NoCalculated = -1000 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.ErrorCode ParameterError = -30 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.ErrorCode Failure = -1 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.ErrorCode Succeed = 0 : Public, Static, Literal, HasDefault
+Struct Santec.STSProcess.Module_Type: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Santec.STSProcess.Module_Type MPM_10 = 0 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.Module_Type MPM_211 = 1 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.Module_Type MPM_212 = 2 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.Module_Type MPM_213 = 3 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.Module_Type MPM_215 = 5 : Public, Static, Literal, HasDefault
+Class Santec.STSProcess.RawItem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Device 'get set' : 
+    Int32 Slot 'get set' : 
+    Int32 Channel 'get set' : 
+    Int32 Range 'get set' : 
+    Int32 SOP  'get set' : 
+    Int32 SweepCount 'get set' : 
+    Single[] TriggerIndexs 'get set' : 
+    Single[] MPMIndexs 'get set' : 
+    Single[] Monitors 'get set' : 
+    Single[] Powers 'get set' : 
+  Methods:
+    set_Device(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Device(): PrivateScope, Public, HideBySig, SpecialName
+    set_Slot(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Slot(): PrivateScope, Public, HideBySig, SpecialName
+    set_Channel(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Channel(): PrivateScope, Public, HideBySig, SpecialName
+    set_Range(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Range(): PrivateScope, Public, HideBySig, SpecialName
+    set_SOP(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SOP(): PrivateScope, Public, HideBySig, SpecialName
+    set_SweepCount(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SweepCount(): PrivateScope, Public, HideBySig, SpecialName
+    set_TriggerIndexs(Single[]): PrivateScope, Public, HideBySig, SpecialName
+    get_TriggerIndexs(): PrivateScope, Public, HideBySig, SpecialName
+    set_MPMIndexs(Single[]): PrivateScope, Public, HideBySig, SpecialName
+    get_MPMIndexs(): PrivateScope, Public, HideBySig, SpecialName
+    set_Monitors(Single[]): PrivateScope, Public, HideBySig, SpecialName
+    get_Monitors(): PrivateScope, Public, HideBySig, SpecialName
+    set_Powers(Single[]): PrivateScope, Public, HideBySig, SpecialName
+    get_Powers(): PrivateScope, Public, HideBySig, SpecialName
+Struct Santec.STSProcess.RescalingMode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Santec.STSProcess.RescalingMode Freerun_SPU = 0 : Public, Static, Literal, HasDefault
+    Santec.STSProcess.RescalingMode Freerun_Referencemodule = 1 : Public, Static, Literal, HasDefault
+Class Santec.STSProcess.ILSTS: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Santec.Rescaling_Process.Rescaling
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Cal_IL(Single[]&): PrivateScope, Public, HideBySig
+    Cal_IL(): PrivateScope, Public, HideBySig
+    Cal_IL_Merge(Module_Type): PrivateScope, Public, HideBySig
+    Get_IL_Data(Single[]&, STSDataStruct): PrivateScope, Public, HideBySig
+    Get_IL_Merge_Data(Single[]&, STSDataStructForMerge): PrivateScope, Public, HideBySig
+Class Santec.STSProcess.PDLSTS: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Santec.STSProcess.ILSTS
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Add_PCU_CalData(Single[,,]): PrivateScope, Public, HideBySig
+    Add_PCU_CalData(Single[,], Single[,], Single[,], Single[,]): PrivateScope, Public, HideBySig
+    Cal_PDL(Single[,], Single[]&, Single[]&, Single[]&, Single[]&): PrivateScope, Public, HideBySig
+    Get_Calibrated_IL(Single[,]&(Out)): PrivateScope, Public, HideBySig
+    Get_Mueller_Raw_Data(Double[]&, Double[]&, Double[]&, Double[]&): PrivateScope, Public, HideBySig
+    Cal_PDL_Parameter(Double[], Double[], Double[], Double[], Single[]&, Single[]&, Single[]&, Single[]&): PrivateScope, Public, HideBySig
+    Cal_2SOP_IL(Single[,], Single[]&): PrivateScope, Public, HideBySig
+Struct Santec.STSProcess.STSDataStruct: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Properties:
+    Int32 MPMNumber 'get set' : 
+    Int32 SlotNumber 'get set' : 
+    Int32 ChannelNumber 'get set' : 
+    Int32 RangeNumber 'get set' : 
+    Int32 SOP  'get set' : 
+    Int32 SweepCount 'get set' : 
+  Methods:
+    set_MPMNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_MPMNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_SlotNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SlotNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_ChannelNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ChannelNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_RangeNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_RangeNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_SOP(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SOP(): PrivateScope, Public, HideBySig, SpecialName
+    set_SweepCount(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SweepCount(): PrivateScope, Public, HideBySig, SpecialName
+Struct Santec.STSProcess.STSDataStructForMerge: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Properties:
+    Int32 MPMNumber 'get set' : 
+    Int32 SlotNumber 'get set' : 
+    Int32 ChannelNumber 'get set' : 
+    Int32 SOP  'get set' : 
+  Methods:
+    set_MPMNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_MPMNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_SlotNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SlotNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_ChannelNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ChannelNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_SOP(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SOP(): PrivateScope, Public, HideBySig, SpecialName

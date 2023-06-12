@@ -1,0 +1,39 @@
+﻿  stdafx.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: 参见“MBCS_Support_Deprecated_In_MFC”的声明
+  Form2.cpp
+Form2.cpp(71): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+Form2.cpp(75): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+Form2.cpp(76): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+Form2.cpp(165): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+Form2.cpp(170): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Form2.cpp(200): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Form2.cpp(225): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+Form2.cpp(230): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Form2.cpp(264): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+Form2.cpp(142): warning C4101: “errorcode”: 未引用的局部变量
+Form2.cpp(307): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+Form2.cpp(317): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+Form2.cpp(743): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Form2.cpp(792): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+Form2.cpp(897): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+Form2.cpp(917): warning C4101: “ret”: 未引用的局部变量
+Form2.cpp(1004): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+Form2.cpp(1043): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+  ILSTS_Sample_MFC.cpp
+  ILSTS_Sample_MFCDlg.cpp
+ILSTS_Sample_MFCDlg.cpp(56): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+ILSTS_Sample_MFCDlg.cpp(60): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+ILSTS_Sample_MFCDlg.cpp(61): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+ILSTS_Sample_MFCDlg.cpp(130): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+ILSTS_Sample_MFCDlg.cpp(131): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+ILSTS_Sample_MFCDlg.cpp(127): warning C4101: “loop1”: 未引用的局部变量
+ILSTS_Sample_MFCDlg.cpp(257): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+ILSTS_Sample_MFCDlg.cpp(297): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+ILSTS_Sample_MFCDlg.cpp(299): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+ILSTS_Sample_MFCDlg.cpp(325): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+  正在生成代码...
+  .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+  Form2.obj :托管的代码存在时 /DEBUG:FASTLINK 不受支持；正在重新启动与 /DEBUG:FULL 的链接
+  ILSTS_Sample_MFC.vcxproj -> D:\test\ILSTS\IL STS sample\Ver1.0.2\ILSTS_Sample_Ver1.2.2_20220831\x64\Debug\ILSTS_Sample_MFC.exe
+  ILSTS_Sample_MFC.vcxproj -> D:\test\ILSTS\IL STS sample\Ver1.0.2\ILSTS_Sample_Ver1.2.2_20220831\x64\Debug\ILSTS_Sample_MFC.pdb (Partial PDB)

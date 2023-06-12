@@ -1,0 +1,52 @@
+  ILSTS_Sample_CPP.Form1.resources - Embedded, ContainedInManifestFile, 
+  ILSTS_Sample_CPP.Instrument_Setting.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly ILSTS_Sample_CPP, Version=0.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly InstrumentDLL, Version=2.5.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Assembly STSProcess, Version=2.2.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class ILSTS_Sample_CPP.Instrument_Setting: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String[] SPU_Resource : Public
+    System.String[] USB_Resource : Public
+    System.String TSL_Communicater : Public
+    System.String MPM_Communicater : Public
+    System.String TSL_Address : Public
+    Int32 TSL_Portnumber : Public
+    Int32 MPM_Count : Public
+    System.String[] MPM_Address : Public
+    Int32[] MPM_Portnumber : Public
+    System.String SPU_DeviveID : Public
+Class ILSTS_Sample_CPP.Form1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Santec.TSL tsl IsByValue : Public, InitOnly
+    Santec.MPM[] mpm : Public
+    Santec.SPU spu IsByValue : Public, InitOnly
+    Santec.STSProcess.ILSTS Cal_STS IsByValue : Public, InitOnly
+    System.Collections.Generic.List`1[Santec.STSProcess.STSDataStruct] Data_struct IsByValue : Public, InitOnly
+    System.Collections.Generic.List`1[Santec.STSProcess.STSDataStruct] Refdata_struct IsByValue : Public, InitOnly
+    System.Collections.Generic.List`1[Santec.STSProcess.STSMonitorStruct] Meas_monitor_struct IsByValue : Public, InitOnly
+    System.Collections.Generic.List`1[Santec.STSProcess.STSDataStruct] Ref_monitordata_struct IsByValue : Public, InitOnly
+    System.Collections.Generic.List`1[Santec.STSProcess.STSDataStructForMerge] Mergedata_struct IsByValue : Public, InitOnly
+    System.Collections.Generic.List`1[System.Int32] Meas_rang IsByValue : Public, InitOnly
+    Boolean Flag_213 : Public
+    Boolean Flag_215 : Public
+    Int32[] MPM_Portnumber : Public

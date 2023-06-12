@@ -1,0 +1,60 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly librayForMFCIL, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly InstrumentDLL, Version=2.3.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Assembly STSProcess, Version=2.2.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class librayForMFCIL.Class1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String[] SPU_Resource : Public
+    System.String[] USB_Resource : Public
+    System.String TSL_Communicater : Public
+    System.String MPM_Communicater : Public
+    System.String PCU_Communicater : Public
+    System.String TSL_Address : Public
+    Int32 TSL_Portnumber : Public
+    Int32 MPM_Count : Public
+    System.String[] MPM_Address : Public
+    Int32[] MPM_Portnumber : Public
+    System.String PCU_Address : Public
+    Int32 PCU_Portnumber : Public
+    System.String SPU_DeviveID : Public
+    Boolean PCU_useing_internal_DAQ : Public
+    Santec.Communication.CommunicationMethod tsl_communcation_method : Public
+    Santec.Communication.CommunicationMethod mpm_communcation_method : Public
+    Santec.Communication.CommunicationMethod pcu_communcation_method : Public
+    Double start_wave : Public
+    Double stop_wave : Public
+    Double step_wave : Public
+    Santec.TSL tsl : Public
+    Santec.MPM[] mpms : Public
+    Santec.SPU spu : Public
+    Santec.PCU pcu : Public
+    Santec.STSProcess.ILSTS cal_sts : Public
+    Santec.STSProcess.STSDataStruct[] Data_struct : Public
+    Santec.STSProcess.STSDataStruct[] Refdata_struct : Public
+    Santec.STSProcess.STSDataStructForMerge[] Mergedata_struct : Public
+    Santec.STSProcess.STSMonitorStruct[] Meas_monitor_struct : Public
+    Santec.STSProcess.STSDataStruct[] Ref_monitordata_struct : Public
+    Int32[] Meas_rang : Public
+    Boolean Flag_213 : Public
+    Boolean Flag_215 : Public
+    Int32[] rangeList : Public
+    Int32[] channelList : Public
+    Int32 rangeCnt : Public
+    Int32 channelCnt : Public
+    Int32 mpmCnt : Public
+    Santec.STSProcess.STSMonitorStruct Ref_monitor_struct : Public
+    System.String filepath : Public
+  Methods:
+    get_instance(): PrivateScope, Public, Static, HideBySig
