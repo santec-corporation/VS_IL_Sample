@@ -34,5 +34,5 @@ This sample software allows you to control up to two MPM main frames (MPM-210 or
 
 ## 4. Operational steps
 
-Refer to the Manual [HERE][Santec IL Swept Test System Manual V1.3_EN_20231009.docx](https://github.com/santec-corporation/VS_ILSample/files/12852241/Santec.IL.Swept.Test.System.Manual.V1.3_EN_20231009.docx)
+Refer to the Manual [HERE](https://github.com/santec-corporation/VS_ILSample/files/12852241/Santec.IL.Swept.Test.System.Manual.V1.3_EN_20231009.docx)
 
