@@ -29,8 +29,8 @@ This sample software allows you to control up to two MPM main frames (MPM-210 or
   - TSL-*** Trigger Output	->	MPM-*** Trigger Input;
   - TSL-*** Power Monitor	->	MPM-*** Power Monitor;
 
-  ![Picture1](https://github.com/santec-corporation/VS_ILSample/assets/135589579/bb3e0e91-92ba-44c8-a146-ee42b55d7daa)
-  ![Picture2](https://github.com/santec-corporation/VS_ILSample/assets/135589579/0015d3c0-a516-441b-8ce6-b6a3c847e983)
+  ![Picture1](https://github.com/santec-corporation/VS_ILSample/assets/135589579/d8ce59c6-d88f-4a49-8ea1-5505d712eba6)
+  ![Picture2](https://github.com/santec-corporation/VS_ILSample/assets/135589579/f305d7d5-cecd-4d23-809a-e233eb9fd980)
 
 ## 4. Operational steps
 
