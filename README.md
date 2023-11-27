@@ -43,10 +43,10 @@ Plug Loss test software developed using C#, C++, VB.net on Visual Studio platfor
     - MPM-210/210H: GPIB or TCP/IP
     
   - ### Line of reference
-    Use a BNC cable to connect the following sections.
-  
+    Use a BNC cable to connect the following sections.  
      - TSL-*** Trigger Output	->	MPM-*** Trigger Input
-    - TSL-*** Power Monitor	->	MPM-*** Power Monitor
+       
+     - TSL-*** Power Monitor	->	MPM-*** Power Monitor
 
      ![Picture1](https://github.com/santec-corporation/VS_ILSample/assets/135589579/d8ce59c6-d88f-4a49-8ea1-5505d712eba6)
      ![Picture2](https://github.com/santec-corporation/VS_ILSample/assets/135589579/f305d7d5-cecd-4d23-809a-e233eb9fd980)
