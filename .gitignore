@@ -433,3 +433,6 @@ FodyWeavers.xsd
 *.log
 VS_IL_Sample/ILSTS_Sample_CPP/Debug/ILSTS_Sample_CPP.Build.CppClean.log
 VS_IL_Sample/ILSTS_Sample_CPP/Debug/ILSTS_Sample_CPP.log
+*.xml
+*.iml
+*.idea
