@@ -79,6 +79,16 @@
             MPM number 0-
             </summary>
         </member>
+        <member name="P:Santec.STSProcess.STSMonitorStruct.SlotNumber">
+            <summary>
+            Slot number 0-
+            </summary>
+        </member>
+        <member name="P:Santec.STSProcess.STSMonitorStruct.ChannelNumber">
+            <summary>
+            Channel number 1-
+            </summary>
+        </member>
         <member name="P:Santec.STSProcess.STSMonitorStruct.SOP">
             <summary>
             sop index
@@ -544,6 +554,11 @@
             MPM-215
             </summary>
         </member>
+        <member name="F:Santec.STSProcess.Module_Type.MPM_217">
+            <summary>
+            MPM-217
+            </summary>
+        </member>
         <member name="T:Santec.STSProcess.RawItem">
             <summary>
             データ保持クラス
@@ -644,6 +659,11 @@
             Freerun,Reference Module mode
             </summary>
         </member>
+        <member name="F:Santec.STSProcess.RescalingMode.Freerun_TSLMonitor">
+            <summary>
+            Freerun,TSL Monitor mode
+            </summary>
+        </member>
         <member name="T:Santec.STSProcess.ILSTS">
             <summary>
             IL Caluclate
@@ -687,6 +707,13 @@
             <returns>错误代码<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
         </member>
         <member name="M:Santec.STSProcess.ILSTS.Cal_IL_Merge(Santec.STSProcess.Module_Type)">
+            <summary>
+             IL data Merge
+            </summary>
+            <param name="type">Module_Type</param>
+            <returns>Errorcode<see cref="T:Santec.STSProcess.ErrorCode"/></returns>
+        </member>
+        <member name="M:Santec.STSProcess.ILSTS.Cal_IL_Merge_for_2SOP(Santec.STSProcess.Module_Type)">
             <summary>
              IL data Merge
             </summary>
@@ -1009,6 +1036,23 @@
             <param name="rescalingIndex">rescaling index</param>
             <returns></returns>
         </member>
+        <member name="M:Santec.Rescaling_Process.MonitorData.Set_Rescaling_Index_TSLMonitor(System.Single[])">
+            <summary>
+            波長ターゲットインデックスからTSL PowerMonitorデータのリスケーリングインデックスを計算
+            </summary>
+            <param name="targetIndex">Target index</param>
+            <returns>Errorcode<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
+        </member>
+        <member name="M:Santec.Rescaling_Process.MonitorData.Get_Rescaling_Index_TSLMonitor(System.Int32,System.Int32,System.Int32,System.Single[]@)">
+            <summary>
+            TSL PowerMonitorデータでのリスケーリングトリガインデックスの読み出し
+            </summary>
+            <param name="device">デバイス番号</param>
+            <param name="count">SweeCount</param>
+            <param name="sop">SOPindex</param>
+            <param name="rescalingIndex">rescaling index</param>
+            <returns></returns>
+        </member>
         <member name="M:Santec.Rescaling_Process.MonitorData.Get_Monitor_MPM_number">
             <summary>
             モニターデータがどこにいるかサーチする
@@ -1120,6 +1164,18 @@
         <member name="M:Santec.Rescaling_Process.RawData.Set_Rescaling_Index(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Single[])">
             <summary>
              MonitorDataクラスからのDAQindexをMPMデータのインデックスに展開
+            </summary>
+            <param name="device">MPM番号</param>
+            <param name="slot">Slot</param>
+            <param name="ch">ch</param>
+            <param name="range">range number</param>
+            <param name="sop">Sop index</param>
+            <param name="targetIndex">Target index</param>
+            <returns>Errorcode<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
+        </member>
+        <member name="M:Santec.Rescaling_Process.RawData.Set_Rescaling_Index_TSLMonitor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Single[])">
+            <summary>
+            MonitorDataクラスからのDAQindexをMPMデータのインデックスに展開
             </summary>
             <param name="device">MPM番号</param>
             <param name="slot">Slot</param>
@@ -1513,6 +1569,18 @@
             </summary>
             <returns>Errorcode<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
         </member>
+        <member name="M:Santec.Rescaling_Process.Rescaling.Cal_RefData_Freerun_TSLMonitor_Rescaling">
+            <summary>
+            TSL Monitor使用時　Freerun リスケーリングモード(ref)
+            </summary>
+            <returns>Errorcode<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
+        </member>
+        <member name="M:Santec.Rescaling_Process.Rescaling.Cal_MeasData_Freerun_TSLMonitor_Rescaling">
+            <summary>
+            TSL Monitor使用時 Freerun リスケーリングモード(meas)
+            </summary>
+            <returns>Errorcode<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
+        </member>
         <member name="M:Santec.Rescaling_Process.Rescaling.Cal_RefData_SME_RefModule_Rescaling">
             <summary>
             MPM-216使用時　SME リスケーリングモード(ref)
@@ -1541,6 +1609,22 @@
             <param name="isRefModule">216 flag</param>
             <returns>Errorcode<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
         </member>
+        <member name="M:Santec.Rescaling_Process.Rescaling.Cal_RefData_Rescaling_TSLMonitor(System.Boolean,System.Boolean)">
+            <summary>
+            Reference data Rescaling
+            </summary>
+            <param name="isSmeMode">SME mode flag</param>
+            <param name="isRefModule">216 flag</param>
+            <returns>Errorcode<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
+        </member>
+        <member name="M:Santec.Rescaling_Process.Rescaling.Cal_MeasData_Rescaling_TSLMonitor(System.Boolean,System.Boolean)">
+            <summary>
+            Measurement data rescaling
+            </summary>
+            <param name="isSmeMode">SME mode flag</param>
+            <param name="isRefModule">216 flag</param>
+            <returns>Errorcode<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
+        </member>
         <member name="M:Santec.Rescaling_Process.Rescaling.Cal_Ref_Rescaling_Index">
             <summary>
             wavelength index rescaling(ref)
@@ -1553,6 +1637,18 @@
             </summary>
             <returns>Errorcode<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
         </member>
+        <member name="M:Santec.Rescaling_Process.Rescaling.Cal_Ref_Rescaling_Index_TSLMonitor">
+            <summary>
+            wavelength index rescaling(ref)
+            /// </summary>
+            <returns>Errorcode<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
+        </member>
+        <member name="M:Santec.Rescaling_Process.Rescaling.Cal_Meas_Rescaling_Index_TSLMonitor">
+            <summary>
+            wavelength index rescaling (meas)
+            </summary>
+            <returns>Errorcode<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
+        </member>
         <member name="M:Santec.Rescaling_Process.Rescaling.Cal_Ref_MPMIndex_offset">
             <summary>
             MPM index offset(ref)
@@ -1560,6 +1656,18 @@
             <returns>Errorcode<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
         </member>
         <member name="M:Santec.Rescaling_Process.Rescaling.Cal_Meas_MPMIndex_offset">
+            <summary>
+            MPM index offset(meas)
+            </summary>
+            <returns>errorcode<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
+        </member>
+        <member name="M:Santec.Rescaling_Process.Rescaling.Cal_Ref_MPMIndex_offset_TSLMonitor">
+            <summary>
+            MPM index offset(ref)
+            </summary>
+            <returns>Errorcode<see cref="T:Santec.STSProcess.ErrorCode">ErrorCode</see></returns>
+        </member>
+        <member name="M:Santec.Rescaling_Process.Rescaling.Cal_Meas_MPMIndex_offset_TSLMonitor">
             <summary>
             MPM index offset(meas)
             </summary>
